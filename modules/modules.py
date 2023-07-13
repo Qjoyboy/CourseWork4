@@ -49,7 +49,7 @@ class Vacancy:
         self.api = vacancy["api"]
         self.salary_from = vacancy["salary_from"]
         self.salary_to = vacancy["salary_to"]
-        self.currency = "RUR" if vacancy["currency"] == "rub" else vacancy["currency"]
+        self.currency = "RUB" if vacancy["currency"] == "rub" else vacancy["currency"]
 
     def __str__(self):
         salary = ""

@@ -1,5 +1,5 @@
-from HHParcer import HHParcer
-from SJParcer import SJParcer
+import HHParser
+import SJParser
 from modules import modules
 from modules.utils import sort_by_salary_from, filter_by_salary_from
 
@@ -19,8 +19,8 @@ def main():
 
     vacancies_json = []
 
-    hh = HHParcer.HeadHunterAPI(keyword)
-    sj = SJParcer.SuperJobAPI(keyword)
+    hh = HHParser.HeadHunter(keyword)
+    sj = SJParser.SuperJobAPI(keyword)
 
     for api in [hh, sj]:
         api.get_vacancies(pages_count)
